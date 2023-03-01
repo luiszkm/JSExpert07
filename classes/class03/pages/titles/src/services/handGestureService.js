@@ -1,5 +1,4 @@
-import { knownGestures, gestureStrings } from "../util/gestures.js"
-
+import { knownGestures, gestureStrings } from "../util/util.js"
 
 
 export default class HandGestureService {
@@ -7,11 +6,13 @@ export default class HandGestureService {
   #handPoseDetection
   #handsVersion
   #detector = null
+  #gestureStrings
 
-  constructor({ fingerpose, handPoseDetection, handsVersion }) {
+  constructor({ fingerpose, handPoseDetection, handsVersion, knownGestures, gestureStrings }) {
     this.#gestureEstimator = new fingerpose.GestureEstimator(knownGestures)
     this.#handPoseDetection = handPoseDetection
     this.#handsVersion = handsVersion
+    this.#gestureStrings = gestureStrings
   }
 
   async * detectGestures(predictions) {
@@ -26,9 +27,9 @@ export default class HandGestureService {
 
       const { x, y } = hand.keypoints.find(keypoint => keypoint.name === 'index_finger_tip')
 
-      yield { event: result.name, x, y}
+      yield { event: result.name, x, y }
 
-      console.log('detected',gestureStrings[result.name]);
+      console.log('detected', this.#gestureStrings[result.name]);
     }
   }
 
@@ -38,7 +39,7 @@ export default class HandGestureService {
       // porcentagem de confiança 90%
       9
     )
-    console.log(predictions);
+   // console.log(predictions);
     return predictions.gestures
   }
 

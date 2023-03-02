@@ -7,6 +7,7 @@ export default class View {
   #videoFrameCanvas = document.createElement("canvas");
   #canvasContext = this.#videoFrameCanvas.getContext('2d', {willReadFrequently: true});
   #videoElement = document.querySelector("#video")
+
   getVideoFrame (video){
     const canvas = this.#videoFrameCanvas
     const [width, height] = [video.videoWidth, video.videoHeight]
@@ -37,6 +38,10 @@ export default class View {
 
   log(text){
     this.#statusElement.innerHTML = text;
+  }
+
+  setVideoSrc(url){
+    this.#videoElement.src = url
   }
  
 }

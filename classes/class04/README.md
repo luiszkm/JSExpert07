@@ -10,7 +10,8 @@ Marque esse projeto com uma estrela 🌟
 ## Pre-reqs
 
 - Este projeto foi criado usando Node.js v19.6
-
+## Live demo
+- PAra testar o projeto final [clique aqui](https://luiszkm.github.io/JSExpert07/classes/class04/pages/titles/)
 ## Running
 
 - Execute `npm ci` para restaurar os pacotes
@@ -19,11 +20,11 @@ Marque esse projeto com uma estrela 🌟
 ## Checklist Features
 - Titles List
   - [x] - Campo para pesquisa não deve travar ao digitar termo de pesquisa
-  - [] - Deve desenhar mãos na tela e fazer com que elementos em segundo plano  continuem sendo clicáveis  🙌
-  - [] - Deve disparar scroll up quando usar a palma das mãos abertas 🖐
-  - [] - Deve disparar scroll down quando usar a palma das mãos fechadas ✊
-  - [] - Deve disparar click no elemento mais próximo quando usar  gesto de pinça 🤏🏻
-  - [] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
+  - [x] - Deve desenhar mãos na tela e fazer com que elementos em segundo plano  continuem sendo clicáveis  🙌
+  - [x] - Deve disparar scroll up quando usar a palma das mãos abertas 🖐
+  - [x] - Deve disparar scroll down quando usar a palma das mãos fechadas ✊
+  - [x] - Deve disparar click no elemento mais próximo quando usar  gesto de pinça 🤏🏻
+  - [x] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
 
 - Video Player
   - [x] - Deve ser possível de reproduzir ou pausar videos com o piscar de olhos 😁

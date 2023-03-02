@@ -46,7 +46,7 @@ export default class HandGestureController {
 
       for await (const { event, x, y } of this.#service.detectGestures(hands)) {
         if (event === 'click') {
-         // if (!ClickShouldRun()) continue
+          if (!ClickShouldRun()) continue
           this.#view.clickOnElement(x, y)
           continue
         }

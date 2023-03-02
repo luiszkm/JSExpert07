@@ -41,6 +41,7 @@ export default class View {
   }
 
   setVideoSrc(url){
+    console.log("url", url);
     this.#videoElement.src = url
   }
  
